@@ -1,0 +1,245 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>顔パーツ制作依頼 デザイン資料</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
+<style>
+.facegrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.facegrid img{display:block;width:100%;height:auto;border-radius:8px;background:#fff}
+.facegrid .fh{font-family:var(--display);font-size:15px;text-align:center;padding:4px 0 6px;display:grid}
+.facegrid .fh small{font-family:var(--body);font-weight:500;font-size:11px;color:var(--sub)}
+.facegrid .fr{grid-column:1/-1;font-family:var(--display);font-size:14px;color:var(--sub);padding-top:8px}
+@media(max-width:520px){.facegrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.pgrid.c6{grid-template-columns:repeat(6,minmax(0,1fr))}
+@media(max-width:860px){.pgrid.c6{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.refgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.refgrid .specfig{margin:0}
+@media(max-width:720px){.refgrid{grid-template-columns:minmax(0,1fr)}}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.rules li{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:14px 16px;display:grid;gap:4px}
+.rules b{font-family:var(--display);font-size:16px}
+.rules span{font-size:14px;color:var(--sub);line-height:1.6}
+@media(max-width:720px){.rules{grid-template-columns:minmax(0,1fr)}}
+.tag.style{color:var(--accent)} .tag.spec{color:var(--sub)} .tag.add{color:var(--mid)}
+.legend .tag{margin-right:6px}
+.pgroup{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:4px 20px 20px}
+.pgroup .phead{border-top:0}
+.pgroup .part{background:var(--bg)}
+.toc a{white-space:nowrap}
+
+.pgrid.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pgrid.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:720px){.pgrid.c4,.pgrid.c5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.part.cnt .ph{aspect-ratio:auto}
+.part.cnt .ph img{width:100%;height:auto;display:block}
+.part.gap .ph{display:flex;align-items:center;justify-content:center;min-height:120px;border:1px dashed var(--line);background:var(--ph);color:var(--sub);font-size:13px}
+
+.specfig{margin:18px 0 0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.specfig img{display:block;width:100%;height:auto}
+.specfig figcaption{padding:10px 14px;font-size:13px;line-height:1.7;color:var(--sub)}
+
+:root{
+  /* 余白の多い資料。左に目次、右に本文。見本の絵が主役で、色は灰紫の地に藍の差し色だけ。 */
+  --bg:#f2f2f6; --panel:#ffffff; --ink:#1c1e2b; --sub:#5b5f73; --line:#d9dae4; --accent:#3d3a94; --accent-soft:#e7e6f6;
+  --ok:#2c7a54; --mid:#9a6a12; --weak:#a8392f; --ph:#eceaf0;
+  --display:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --body:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#15161d; --panel:#1e2029; --ink:#ecedf4; --sub:#a6a9bb; --line:#343747; --accent:#a9a5f2; --accent-soft:#2a2a45;
+  --ok:#6fcb9f; --mid:#e0b25a; --weak:#f08a7f; --ph:#272934; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#15161d; --panel:#1e2029; --ink:#ecedf4; --sub:#a6a9bb; --line:#343747; --accent:#a9a5f2; --accent-soft:#2a2a45;
+  --ok:#6fcb9f; --mid:#e0b25a; --weak:#f08a7f; --ph:#272934; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.85;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-block:40px 96px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(26px,4.4vw,40px);font-weight:900;letter-spacing:.01em}
+h2{font-size:clamp(20px,2.6vw,26px);font-weight:700;padding-top:8px}
+h3{font-size:18px;font-weight:700}
+h3 small,.toc small{font-family:var(--body);font-weight:500;font-size:12px;color:var(--sub);margin-left:8px}
+p{margin:0;max-width:44em}
+.lead{font-size:16px;color:var(--sub);margin-top:14px}
+.eyebrow{font-size:12px;letter-spacing:.14em;color:var(--accent);font-weight:700}
+header{display:grid;gap:6px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;margin-top:32px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top, 0px) + 16px);align-self:start;display:grid;gap:2px;font-size:13px}
+.toc a{color:var(--sub);text-decoration:none;padding:5px 10px;border-radius:6px;display:flex;justify-content:space-between;gap:8px}
+.toc a:hover,.toc a:focus-visible{background:var(--accent-soft);color:var(--ink);outline:none}
+.toc b{font-family:var(--display);font-size:12px;letter-spacing:.1em;color:var(--ink);padding:14px 10px 4px}
+main{display:grid;gap:64px;min-width:0}
+main>section{display:grid;gap:20px;min-width:0}
+.note{background:var(--accent-soft);border-radius:10px;padding:14px 18px;font-size:14px;max-width:none}
+.note b{color:var(--accent)}
+.must{border-left:4px solid var(--accent);padding:6px 0 6px 16px;font-size:16px;max-width:42em}
+.must b{display:block;font-family:var(--display);font-size:19px;line-height:1.5;margin-bottom:4px}
+.traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.traits li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.7}
+.traits b{display:block;font-family:var(--display);font-size:15px;margin-bottom:2px}
+.chars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+figure{margin:0}
+.char img,.ng img{display:block;width:100%;height:auto;border-radius:8px;background:var(--ph)}
+.char figcaption,.ng figcaption{display:flex;gap:8px;align-items:baseline;font-size:12px;color:var(--sub);padding-top:6px}
+.char b{font-family:var(--display);color:var(--ink);font-size:13px}
+.sub{font-family:var(--display);font-size:14px;font-weight:700;color:var(--sub);letter-spacing:.06em}
+.ngs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media(max-width:860px){.ngs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ngs.e4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:860px){.ngs.e4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ng.okc{border-color:var(--ok)} .ng.okc b{color:var(--ok)}
+.nglist{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.nglist li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:2px;font-size:13px;line-height:1.6}
+.nglist b{font-family:var(--display);font-size:14px;color:var(--weak)}
+.nglist span{color:var(--sub)}
+.ng .pair{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.ng{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px}
+.ng figcaption{padding:8px 4px 2px}
+.ngs:has(>.ng:only-child){grid-template-columns:minmax(0,240px)}
+.ng figcaption{display:grid;gap:2px}
+.ng b{color:var(--weak);font-family:var(--display);font-size:14px}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--line);line-height:1.7}
+tr:last-child th,tr:last-child td{border-bottom:0}
+thead th{font-size:12px;color:var(--sub);font-weight:500;letter-spacing:.06em}
+tbody th{font-family:var(--display);white-space:nowrap}
+td.n{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--sub)}
+.pgroup{display:grid;gap:14px;scroll-margin-top:16px;min-width:0}
+.phead{display:grid;gap:2px;padding-top:18px}
+.phead p{color:var(--sub);font-size:14px}
+.pgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.pgrid.wide{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.pgrid.strip{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.part{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.part .ph{background:var(--ph);display:grid;place-items:center}
+.part img{display:block;width:100%;height:auto}
+.part figcaption{display:grid;grid-template-columns:1fr;gap:2px 8px;align-items:baseline;padding:9px 12px 11px;font-size:12px;line-height:1.5}
+.part b{font-family:var(--display);font-size:14px}
+.part .nm{color:var(--sub)}
+.tag{grid-column:1/-1;justify-self:start;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px;border:1px solid currentColor}
+.tag.ok{color:var(--ok)} .tag.mid{color:var(--mid)} .tag.weak{color:var(--weak)}
+.memo{grid-column:1/-1;color:var(--sub);font-size:11px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--sub)}
+.ex{display:grid;gap:16px}
+.ex img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.ex figcaption{font-size:13px;color:var(--sub);padding-top:6px}
+.open{display:grid;gap:10px;margin:0;padding:0;list-style:none;counter-reset:q}
+.open li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px 12px 52px;position:relative;font-size:14px;line-height:1.7}
+.open li::before{counter-increment:q;content:counter(q);position:absolute;left:16px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--display);font-weight:700;font-size:13px;display:grid;place-items:center}
+.open b{font-family:var(--display)}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--sub)}
+@media (max-width:860px){ .layout{grid-template-columns:minmax(0,1fr);gap:24px} .toc{position:static;grid-template-columns:repeat(auto-fill,minmax(130px,1fr))} .toc b{grid-column:1/-1;padding-top:6px} .chars{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:520px){ .chars{grid-template-columns:repeat(2,minmax(0,1fr))} .ngs{grid-template-columns:minmax(0,1fr)} .pgrid,.pgrid.wide{grid-template-columns:repeat(2,minmax(0,1fr))} .pgrid.strip{grid-template-columns:minmax(0,1fr)} }
+</style>
+<div class="wrap">
+<header>
+  <span class="eyebrow">3Dアニメ顔 外注制作　デザイン資料</span>
+  <h1>この画風の顔になる3Dを、作っていただきたい</h1>
+  <p class="lead">ご提案いただいた制作内容に添える、見た目の指定です。この資料でお伝えしたいのは、でき上がった3Dの顔がどんな絵に見えるか、の一点です。</p>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="目次">
+  <b>この資料</b>
+  <a href="#summary">1 お願いすること</a><a href="#style">2 目指す画風</a><a href="#patterns">3 制作内容ごとのパターン</a><a href="#f-face">　①② 顔のベース</a><a href="#f-eye">　③ 目の形状</a><a href="#f-brow">　④ 眉毛の形状</a><a href="#f-exp">　⑤ 表情差分</a><a href="#f-iris">　⑥ 瞳（追加のお願い）</a><a href="#open">4 確認したいこと</a>
+</nav>
+<main>
+
+<section id="summary">
+  <h2>1　この資料でお願いすること</h2>
+  <p class="must"><b>ご提案いただいた制作内容（①〜⑤）に対して、こちらの希望するパターンをまとめました。</b>個数はご提案に合わせています。流用・改造でお願いする分は、改造で対応できる範囲で、ここに挙げたものが欲しいという希望です。難しいものがあれば教えてください。</p>
+  <p class="must"><b>納期を優先したいと考えています。</b>12月中旬までに、どこまで作成が可能かも教えていただきたいです。</p>
+  <ul class="rules">
+    <li><b>瞳と目</b><span>目の形は一般的な目の種類15で幅広くそろえる。色と描き方は画風見本に合わせる</span></li>
+    <li><b>顔の型・眉・口・歯</b><span>図の形を基準にする</span></li>
+    <li><b>全体の仕上がり</b><span>パターンの絵は形の参考。全パターンを、20体の見本に近づけた作風で作る</span></li>
+  </ul>
+  <div class="tablebox"><table><thead><tr><th>制作内容</th><th>ご提案の個数</th><th>こちらの希望</th></tr></thead><tbody>
+  <tr><th>① 顔〜首まわりのベース（新規）</th><td>1（丸顔）</td><td>1</td></tr>
+  <tr><th>② 顔〜首まわりのベース（流用・改造）</th><td>3（卵型・角顔・菱形）</td><td>3</td></tr>
+  <tr><th>③ 目の形状</th><td>約15</td><td>15（一般的な目の種類）</td></tr>
+  <tr><th>④ 眉毛の形状</th><td>約5</td><td>5</td></tr>
+  <tr><th>⑤ 表情差分</th><td>11（あいうえお・微笑み・笑い口・食いしばり・丸口・八重歯・ギザギザ歯）</td><td>11</td></tr>
+  <tr><th>⑥ 瞳（追加のお願い）</th><td>記載なし</td><td>12</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="style">
+  <h2>2　目指す画風</h2>
+  <p class="must"><b>顔のパーツは、あくまで下の20体に近い作風で作っていただきたいです。</b>見本と同じ顔を再現していただく必要はありません。私たちが現状目指している画風の目安として、まず特徴を5点にまとめ、そのあとに見本の絵を並べます。</p>
+  <p>パーツを組み合わせた3Dの顔を表示したとき、この見本と同じ線と塗りの調子に見えることを目標にしています。髪の色や服が変わっても、調子は同じです。</p>
+  <ul class="traits">
+    <li><b>線</b>濃い茶色の細い線。太さに強弱があり、はっきり見える。</li>
+    <li><b>目</b>瞳は上が濃く、下に明るい弧。小さな光がいくつか入る。上まつ毛は濃い茶色で、先がすっと細くなる。</li>
+    <li><b>肌</b>白ではなく、温かいクリーム色。頬にうすい桃色。鼻に小さな赤い点。</li>
+    <li><b>髪</b>束のかたまりで見せる。影に深みがあり、明るい筋が入る。筆の跡が残る塗り。</li>
+    <li><b>表情</b>落ち着いた表情が基本。大きく丸く笑う顔を基準にしない。</li>
+  </ul>
+  <span class="sub">女性 10体</span>
+  <div class="chars"><figure class="char"><img src="img/char_F01.jpg" width="560" height="840" alt="画風見本 F01" loading="lazy"><figcaption><b>F01</b><span>カジュアル</span></figcaption></figure>
+<figure class="char"><img src="img/char_F02.jpg" width="560" height="840" alt="画風見本 F02" loading="lazy"><figcaption><b>F02</b><span>ストリート</span></figcaption></figure>
+<figure class="char"><img src="img/char_F03.jpg" width="560" height="840" alt="画風見本 F03" loading="lazy"><figcaption><b>F03</b><span>アイドル</span></figcaption></figure>
+<figure class="char"><img src="img/char_F04.jpg" width="560" height="840" alt="画風見本 F04" loading="lazy"><figcaption><b>F04</b><span>カジュアル</span></figcaption></figure>
+<figure class="char"><img src="img/char_F05.jpg" width="560" height="840" alt="画風見本 F05" loading="lazy"><figcaption><b>F05</b><span>カジュアル</span></figcaption></figure>
+<figure class="char"><img src="img/char_F06.jpg" width="560" height="840" alt="画風見本 F06" loading="lazy"><figcaption><b>F06</b><span>ストリート</span></figcaption></figure>
+<figure class="char"><img src="img/char_F07.jpg" width="560" height="840" alt="画風見本 F07" loading="lazy"><figcaption><b>F07</b><span>アイドル</span></figcaption></figure>
+<figure class="char"><img src="img/char_F08.jpg" width="560" height="840" alt="画風見本 F08" loading="lazy"><figcaption><b>F08</b><span>ファンタジー</span></figcaption></figure>
+<figure class="char"><img src="img/char_F09.jpg" width="560" height="840" alt="画風見本 F09" loading="lazy"><figcaption><b>F09</b><span>アイドル</span></figcaption></figure>
+<figure class="char"><img src="img/char_F10.jpg" width="560" height="840" alt="画風見本 F10" loading="lazy"><figcaption><b>F10</b><span>アイドル</span></figcaption></figure></div>
+  <span class="sub">男性 10体</span>
+  <div class="chars"><figure class="char"><img src="img/char_M01.jpg" width="560" height="840" alt="画風見本 M01" loading="lazy"><figcaption><b>M01</b><span>ファンタジー</span></figcaption></figure>
+<figure class="char"><img src="img/char_M02.jpg" width="560" height="840" alt="画風見本 M02" loading="lazy"><figcaption><b>M02</b><span>ファンタジー</span></figcaption></figure>
+<figure class="char"><img src="img/char_M03.jpg" width="560" height="840" alt="画風見本 M03" loading="lazy"><figcaption><b>M03</b><span>和風</span></figcaption></figure>
+<figure class="char"><img src="img/char_M04.jpg" width="560" height="840" alt="画風見本 M04" loading="lazy"><figcaption><b>M04</b><span>カジュアル</span></figcaption></figure>
+<figure class="char"><img src="img/char_M05.jpg" width="560" height="840" alt="画風見本 M05" loading="lazy"><figcaption><b>M05</b><span>学園</span></figcaption></figure>
+<figure class="char"><img src="img/char_M06.jpg" width="560" height="840" alt="画風見本 M06" loading="lazy"><figcaption><b>M06</b><span>学園</span></figcaption></figure>
+<figure class="char"><img src="img/char_M07.jpg" width="560" height="840" alt="画風見本 M07" loading="lazy"><figcaption><b>M07</b><span>ファンタジー</span></figcaption></figure>
+<figure class="char"><img src="img/char_M08.jpg" width="560" height="840" alt="画風見本 M08" loading="lazy"><figcaption><b>M08</b><span>和風</span></figcaption></figure>
+<figure class="char"><img src="img/char_M09.jpg" width="560" height="840" alt="画風見本 M09" loading="lazy"><figcaption><b>M09</b><span>ストリート</span></figcaption></figure>
+<figure class="char"><img src="img/char_M10.jpg" width="560" height="840" alt="画風見本 M10" loading="lazy"><figcaption><b>M10</b><span>アイドル</span></figcaption></figure></div>
+  <span class="sub">避けたい顔　顔の描き方として合わせないでほしい例</span>
+  <p>目の3項目は、基準の目を1か所だけ加工して作った例です。左端が基準で、右の3枚がそれぞれ1点だけ違います。</p>
+  <div class="ngs e4"><figure class="ng okc"><img src="img/egeye_ok.jpg" width="540" height="370" alt="基準（この資料の画風）" loading="lazy"><figcaption><b>基準（この資料の画風）</b><span>瞳は上が濃く下が明るい。光の点がいくつか入る。まつ毛は毛先が細い。</span></figcaption></figure><figure class="ng "><img src="img/egeye_flat.jpg" width="540" height="370" alt="1　瞳が単色でベタ塗り" loading="lazy"><figcaption><b>1　瞳が単色でベタ塗り</b><span>上が濃く下が明るい濃淡がない。</span></figcaption></figure><figure class="ng "><img src="img/egeye_nolight.jpg" width="540" height="370" alt="2　瞳に光がまったくない" loading="lazy"><figcaption><b>2　瞳に光がまったくない</b><span>光の点がなく、目が沈んで見える。</span></figcaption></figure><figure class="ng "><img src="img/egeye_lash.jpg" width="540" height="370" alt="4　まつ毛が真っ黒で太い一本線" loading="lazy"><figcaption><b>4　まつ毛が真っ黒で太い一本線</b><span>毛先が分かれず、先も細くならない。</span></figcaption></figure></div>
+
+  <p class="note"><b>見本の絵について</b>　方向を伝えるために画像生成で作った見本です。細部の正しさより、線と塗りの調子を見てください。髪は今回の制作の対象外ですが、顔と並んだときの釣り合いの参考として髪も載せています。</p>
+</section>
+
+<section id="patterns">
+  <h2>3　制作内容ごとのデザインパターン</h2>
+  <p class="must"><b>ここに並べた絵は、あくまで形の参考です。</b>図によっては絵柄が見本と違いますが、仕上がりは、顔・目・眉・口のすべてのパターンを「2 目指す画風」に近づけた作風で作っていただきたいです。</p>
+  <p>ご提案の制作内容（①〜⑤）の順に、こちらの希望するパターンを1個ずつ並べています。</p>
+  <div class="pgroup" id="f-face"><div class="phead"><h3>①② 顔〜首まわりのベース<small>1＋3パターン</small></h3><p>横に顔の型が4つ、縦に顔立ち（女性的・中性的・男性的）が3つ並んでいます。</p><p><b>希望：</b>丸顔を新規で作っていただき、卵型・角顔・菱形は、そこからの流用・改造で対応できる範囲でお願いしたいです。顔立ち（女性的・中性的・男性的）の差も、改造で可能な範囲で、この図の12通りが欲しいと考えています。</p><p>下段（男性的）は、上の2段と顎の形が違います。卵型・角顔・菱形への変形は、下段では下段の中で横に展開する形になると考えています。</p></div><div class="facegrid"><b class="fr">女性的な顔立ち</b><img src="img/f_0_0.jpg" width="396" height="396" alt="女性的な顔立ちの例 1" loading="lazy"><img src="img/f_0_1.jpg" width="396" height="396" alt="女性的な顔立ちの例 2" loading="lazy"><img src="img/f_0_2.jpg" width="396" height="396" alt="女性的な顔立ちの例 3" loading="lazy"><img src="img/f_0_3.jpg" width="396" height="396" alt="女性的な顔立ちの例 4" loading="lazy"><b class="fr">中性的な顔立ち</b><img src="img/f_1_0.jpg" width="396" height="396" alt="中性的な顔立ちの例 1" loading="lazy"><img src="img/f_1_1.jpg" width="396" height="396" alt="中性的な顔立ちの例 2" loading="lazy"><img src="img/f_1_2.jpg" width="396" height="396" alt="中性的な顔立ちの例 3" loading="lazy"><img src="img/f_1_3.jpg" width="396" height="396" alt="中性的な顔立ちの例 4" loading="lazy"><b class="fr">男性的な顔立ち</b><img src="img/f_2_0.jpg" width="396" height="396" alt="男性的な顔立ちの例 1" loading="lazy"><img src="img/f_2_1.jpg" width="396" height="396" alt="男性的な顔立ちの例 2" loading="lazy"><img src="img/f_2_2.jpg" width="396" height="396" alt="男性的な顔立ちの例 3" loading="lazy"><img src="img/f_2_3.jpg" width="396" height="396" alt="男性的な顔立ちの例 4" loading="lazy"></div></div>
+  <div class="pgroup" id="f-eye"><div class="phead"><h3>③ 目の形状<small>15パターン</small></h3><p>丸目から糸目・三白眼まで、キャラクターの印象が変わる形を幅広くそろえられればと考えております。見本の形はあくまで参考です。色と描き方は確定した画風に合わせてください。種類の特徴を出すために強調、または変更が必要な場合は、見本から強調・変更してください。</p></div><div class="pgrid strip"><figure class="part strip"><div class="ph"><img src="img/d_EY01.jpg" width="560" height="280" alt="丸目" loading="lazy"></div><figcaption><b>01　丸目</b><span class="memo">大きく丸い。開きが最も大きい</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY02.jpg" width="560" height="280" alt="アーモンド目" loading="lazy"></div><figcaption><b>02　アーモンド目</b><span class="memo">標準。目頭・目尻がゆるく尖る</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY03.jpg" width="560" height="280" alt="切れ長" loading="lazy"></div><figcaption><b>03　切れ長</b><span class="memo">横に長く、目尻がすっと伸びる</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY04.jpg" width="560" height="280" alt="つり目" loading="lazy"></div><figcaption><b>04　つり目</b><span class="memo">目尻が上がる</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY05.jpg" width="560" height="280" alt="たれ目" loading="lazy"></div><figcaption><b>05　たれ目</b><span class="memo">目尻が下がる</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY06.jpg" width="560" height="280" alt="猫目" loading="lazy"></div><figcaption><b>06　猫目</b><span class="memo">大きめで目尻が鋭く上がる</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY07.jpg" width="560" height="280" alt="細目" loading="lazy"></div><figcaption><b>07　細目</b><span class="memo">小さく、開きが浅い</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY08.jpg" width="560" height="280" alt="糸目" loading="lazy"></div><figcaption><b>08　糸目</b><span class="memo">閉じた弧の線だけ。瞳は見えない</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY09.jpg" width="560" height="280" alt="ジト目" loading="lazy"></div><figcaption><b>09　ジト目</b><span class="memo">上まぶたが平らに下り、瞳の上が隠れる</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY10.jpg" width="560" height="280" alt="眠たげな目" loading="lazy"></div><figcaption><b>10　眠たげな目</b><span class="memo">上まぶたが丸く半分ほど下りる</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY11.jpg" width="560" height="280" alt="三白眼" loading="lazy"></div><figcaption><b>11　三白眼</b><span class="memo">瞳が小さく、周りの白目が見える</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY12.jpg" width="560" height="280" alt="鋭い目" loading="lazy"></div><figcaption><b>12　鋭い目</b><span class="memo">上まぶたの角度が急で、にらむ印象</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY13.jpg" width="560" height="280" alt="一重" loading="lazy"></div><figcaption><b>13　一重</b><span class="memo">二重の線がない</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY14.jpg" width="560" height="280" alt="くっきり二重" loading="lazy"></div><figcaption><b>14　くっきり二重</b><span class="memo">上まぶたの上に二重の線が入る</span></figcaption></figure><figure class="part strip"><div class="ph"><img src="img/d_EY15.jpg" width="560" height="280" alt="三角目" loading="lazy"></div><figcaption><b>15　三角目</b><span class="memo">下辺が平らで、上辺が目頭から斜めに上がる</span></figcaption></figure></div></div>
+  <div class="pgroup" id="f-brow"><div class="phead"><h3>④ 眉毛の形状<small>5パターン</small></h3><p>細い直線眉から下がり眉まで、5パターンです。</p></div><div class="pgrid c5"><figure class="part cnt"><div class="ph"><img src="img/c_brow0.jpg" width="324" height="324" alt="1 細い直線眉" loading="lazy"></div><figcaption><b>1 細い直線眉</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_brow1.jpg" width="324" height="324" alt="2 アーチ眉" loading="lazy"></div><figcaption><b>2 アーチ眉</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_brow2.jpg" width="323" height="324" alt="3 角度のある眉" loading="lazy"></div><figcaption><b>3 角度のある眉</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_brow3.jpg" width="324" height="324" alt="4 太めの直線眉" loading="lazy"></div><figcaption><b>4 太めの直線眉</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_brow4.jpg" width="324" height="324" alt="5 下がり眉" loading="lazy"></div><figcaption><b>5 下がり眉</b></figcaption></figure></div></div>
+  <div class="pgroup" id="f-exp"><div class="phead"><h3>⑤ 表情差分<small>11パターン</small></h3><p>ご提案の11項目の順です。歯が描かれていない口も、必要であれば歯を書き足していただきたいです。</p></div><div class="pgrid c6"><figure class="part cnt"><div class="ph"><img src="img/c_exp_a.jpg" width="362" height="362" alt="1 リップシンク「あ」" loading="lazy"></div><figcaption><b>1 リップシンク「あ」</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_i.jpg" width="362" height="362" alt="2 リップシンク「い」" loading="lazy"></div><figcaption><b>2 リップシンク「い」</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_u.jpg" width="362" height="362" alt="3 リップシンク「う」" loading="lazy"></div><figcaption><b>3 リップシンク「う」</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_e.jpg" width="362" height="362" alt="4 リップシンク「え」" loading="lazy"></div><figcaption><b>4 リップシンク「え」</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_o.jpg" width="362" height="362" alt="5 リップシンク「お」" loading="lazy"></div><figcaption><b>5 リップシンク「お」</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_smile.jpg" width="362" height="362" alt="6 わずかに開く微笑み" loading="lazy"></div><figcaption><b>6 わずかに開く微笑み</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_laugh.jpg" width="362" height="362" alt="7 横に広い笑い口" loading="lazy"></div><figcaption><b>7 横に広い笑い口</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_clench.jpg" width="362" height="362" alt="8 歯を食いしばる口" loading="lazy"></div><figcaption><b>8 歯を食いしばる口</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_round.jpg" width="362" height="362" alt="9 驚きの丸口" loading="lazy"></div><figcaption><b>9 驚きの丸口</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_fang.jpg" width="362" height="362" alt="10 尖った八重歯" loading="lazy"></div><figcaption><b>10 尖った八重歯</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_exp_shark.jpg" width="362" height="362" alt="11 サメのようなギザギザ歯" loading="lazy"></div><figcaption><b>11 サメのようなギザギザ歯</b></figcaption></figure></div></div>
+  <div class="pgroup" id="f-iris"><div class="phead"><h3>⑥ 瞳（追加のお願い）<small>12パターン</small></h3><p>ご提案の①〜⑤に瞳の記載がなかったため、追加でお願いしたい内容です。改造で対応できる範囲で、この12パターンが欲しいと考えています。見本の瞳はあくまで参考です。画風に合わせたアレンジや、強調・変更が必要な場合は、見本から変えていただいて構いません。</p>
+  <ul class="irisrule">
+    <li><b>作り方</b>　虹彩・瞳孔・光の点を分けた瞳テクスチャにして、色は材質で変えられるようにしたいです。</li>
+    <li><b>全パターン共通の描き方</b>　上が濃く、下に明るい三日月形の明部。光の点は大きめ1つ＋小さい点を数個。外周に濃い縁の線。</li>
+    <li><b>まぶたとの関係</b>　瞳の上側はまぶたで少し隠れる前提です。半目・閉じ目で瞳がつぶれて見えないようにしたいです。</li>
+  </ul></div><div class="pgrid c6"><figure class="part cnt"><div class="ph"><img src="img/c_iris00.jpg" width="360" height="318" alt="黒い瞳孔" loading="lazy"></div><figcaption><b>1　黒い瞳孔</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris01.jpg" width="360" height="318" alt="同系色の瞳孔" loading="lazy"></div><figcaption><b>2　同系色の瞳孔</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris02.jpg" width="360" height="318" alt="瞳孔なし" loading="lazy"></div><figcaption><b>3　瞳孔なし</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris03.jpg" width="360" height="318" alt="明るい中心" loading="lazy"></div><figcaption><b>4　明るい中心</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris04.jpg" width="360" height="318" alt="セル塗り（2色の境目）" loading="lazy"></div><figcaption><b>5　セル塗り（2色の境目）</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris05.jpg" width="360" height="318" alt="上下グラデーション" loading="lazy"></div><figcaption><b>6　上下グラデーション</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris06.jpg" width="360" height="318" alt="放射線" loading="lazy"></div><figcaption><b>7　放射線</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris07.jpg" width="360" height="318" alt="宝石の面" loading="lazy"></div><figcaption><b>8　宝石の面</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris08.jpg" width="360" height="318" alt="濃い外周リング" loading="lazy"></div><figcaption><b>9　濃い外周リング</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris09.jpg" width="360" height="318" alt="柔らかい縁" loading="lazy"></div><figcaption><b>10　柔らかい縁</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris10.jpg" width="360" height="318" alt="星形の瞳孔" loading="lazy"></div><figcaption><b>11　星形の瞳孔</b></figcaption></figure><figure class="part cnt"><div class="ph"><img src="img/c_iris11.jpg" width="360" height="318" alt="縦スリット" loading="lazy"></div><figcaption><b>12　縦スリット</b></figcaption></figure></div></div>
+</section>
+
+<section id="open">
+  <h2>4　確認したいこと</h2>
+  <p>画風を合わせるうえで、ご相談したい点です。</p>
+  <ol class="open">
+    <li><b>納期</b>　納期を優先したい。12月中旬までに、どこまで作成が可能か教えていただきたい。</li>
+    <li><b>目元の色と艶</b>　瞳とまつ毛の色・艶は、画風見本（濃い茶色の上まつ毛、艶は弱め）を基準にしていただきたい。</li>
+    <li><b>眉の色</b>　画風見本のように、髪の色に寄せた濃いめの茶にしていただきたい。対応できるか。</li>
+    <li><b>顔の型と顔立ちの関係</b>　下段（男性的）は顎の形が上の2段と違う。4パターンの変形は、顔立ちの段ごとに横へ展開する理解でよいか。</li>
+    <li><b>目の形状（③）</b>　糸目（閉じた目）や三白眼など、まぶたや白目の作りが変わるものも、目のパーツの範囲で対応できるか。</li>
+    <li><b>リップシンクの口（⑤）</b>　「あ・い・う・え・お」の口は、この見本の形でよいか。</li>
+    <li><b>線の出し方</b>　輪郭と目元の線を、3Dの表示でどう出すか。テクスチャに描くのか、表示側の処理で出すのか。</li>
+    <li><b>瞳（⑥）の追加</b>　ご提案の①〜⑤に瞳の記載がないため、⑥として追加をお願いしたい。12パターンのうち、改造で対応できる範囲と、別のお見積もりになる範囲を教えていただきたい。</li>
+    <li><b>肌と頬の色</b>　材質設定で、クリーム色の肌と頬の桃色をどう持たせるか。</li>
+    <li><b>試作での確認方法</b>　見本の絵と3D試作を、同じ角度・同じ大きさで並べて見比べる形で進めてよいか。</li>
+  </ol>
+</section>
+
+</main>
+</div>
+<footer>見本の絵は画像生成で作成したものです。</footer>
+</div>
+
+</html>
